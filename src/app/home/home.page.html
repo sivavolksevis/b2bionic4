@@ -1,12 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-no-padding">
+  <img src="../../assets/images/volkSevis_logo.png" alt="logo" width="120" class="logo" />
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <ion-grid class="home-slider ion-no-padding">
+    <ion-slides class="ion-no-padding" no-padding autoplay="400" loop="true" speed="3000" [options]="slideOptsOne" pager="true">
+      <ion-slide>
+        <img src="../../assets/images/slide_1.jpeg" alt="Home slide image">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/slide_2.jpeg" alt="Home slide image">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/slide_3.jpeg" alt="Home slide image">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/images/slide_1.jpeg" alt="Home slide image">
+      </ion-slide>
+    </ion-slides>
+    <ion-grid class="bottom-content">
+      <label class="mb-3" for="">Login with</label>
+      <button (click)="goToLoginWithMobile()"><i class="fa fa-phone" aria-hidden="true"></i></button>
+      <button (click)="goToLoginWithEmail()"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+      <a href="#">Continue with your Registration</a>
+    </ion-grid>
+  </ion-grid>
 </ion-content>
