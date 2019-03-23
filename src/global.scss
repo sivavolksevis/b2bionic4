@@ -10,6 +10,7 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 
 @import url("https://fonts.googleapis.com/css?family=Oswald");
@@ -23,9 +24,11 @@ body {
     font-size: 14px;
     color: #666;
 }
+
 a {
     color: #228585;
 }
+
 h1 {
     color: #4cb6be;
     font-size: 30px;
@@ -33,6 +36,14 @@ h1 {
     margin: 0;
     font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+h2 {
+    color: #4cb6be;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .logo {
@@ -66,7 +77,7 @@ h1 {
     .bottom-content {
         color: #fff;
         text-align: center;
-        margin: 40px auto;
+        margin: 20px auto;
         display: block;
         width: 200px;
 
@@ -86,9 +97,9 @@ h1 {
         }
 
         button {
-            width: 80px;
-            height: 80px;
-            border-radius: 80px;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
             background: #103b49;
             font-size: 29px;
             color: #708992;
@@ -121,8 +132,16 @@ h1 {
 }
 
 .head-grid {
-    background: linear-gradient(to bottom, rgba(34, 132, 132, 1) 0%, rgba(20, 76, 88, 1) 100%);
+    background: linear-gradient(to bottom, #228484 0%, #144c58 100%);
     position: relative;
+    z-index: 9;
+    overflow: hidden;
+
+    &.inner-grid {
+        position: fixed;
+        height: 104px;
+    }
+
     h2 {
         position: absolute;
         left: 0;
@@ -132,10 +151,11 @@ h1 {
         text-align: center;
         top: 16px;
         color: #fff;
-        font-size:26px;
+        font-size: 26px;
         font-family: 'Oswald', sans-serif;
         width: 72%;
     }
+
     img {
         &.inner-logo {
             position: absolute;
@@ -147,6 +167,7 @@ h1 {
             margin: auto;
         }
     }
+
     .subTitle-c {
         position: absolute;
         left: 0;
@@ -157,14 +178,15 @@ h1 {
         color: #c0ebe7;
     }
 }
+
 .content-grid {
     position: relative;
     z-index: 9;
-    top: -60px;
-    margin-bottom: -60px;
+    top: -90px;
+    margin-bottom: -90px;
     background: #fff;
     width: 90%;
-    padding: 50px 20px;
+    padding: 20px;
     -webkit-box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.11);
@@ -172,40 +194,30 @@ h1 {
 }
 
 .buttonFill {
-    background:  linear-gradient(to right, rgba(17,64,77,1) 0%, rgba(30,116,117,1) 100%);;
+    background: linear-gradient(to right, rgba(17, 64, 77, 1) 0%, rgba(30, 116, 117, 1) 100%);
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
 }
+
 form {
     ion-label {
         width: 100%;
     }
-    ion-input {
-        &.sc-ion-input-ios-h {
-            border: solid 1px #f2f2f2;
-            padding: 10px !important;
-            overflow: hidden;
-            display:  block;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-        }
-        input {
-            transform: none;
-        }
-    }
 }
+
 .forgetPassword {
     text-decoration: underline;
     display: block;
     float: right;
 }
+
 .backToHome {
-   position: absolute;
-   left: 25px;
-   top: 25px;
+    position: absolute;
+    left: 25px;
+    top: 25px;
 }
+
 ion-progress-bar {
     position: absolute;
     top: 66px;
@@ -218,15 +230,18 @@ ion-progress-bar {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
 }
+
 .awaiting {
     position: relative;
     text-align: center;
     height: auto;
+
     h3 {
         font-family: 'Oswald', sans-serif;
         font-size: 22px;
         color: #136785;
     }
+
     hr {
         position: absolute;
         height: 8px;
@@ -240,17 +255,24 @@ ion-progress-bar {
 
 .content-grid-inner {
     position: relative;
-    z-index: 9;
-    top: -30px;
-    margin-bottom: -30px;
+    top: 122px;
+    margin-bottom: 0;
     background: none;
     width: 90%;
     padding: 0;
+    overflow: hidden;
+    z-index: 8;
+
+    &.business-inner {
+        top: 222px;
+    }
+
     .search-service-provide {
         position: relative;
         background: #134657;
         color: #fff;
         height: 70px;
+
         .serce-icon-c {
             background: #07edff;
             display: inline-block;
@@ -260,6 +282,7 @@ ion-progress-bar {
             font-size: 30px;
             text-align: center;
             line-height: 70px;
+
             &:after {
                 border-left: 28px solid #07edff;
                 border-top: 37px solid transparent;
@@ -272,6 +295,7 @@ ion-progress-bar {
                 width: 0;
             }
         }
+
         ion-input {
             position: absolute;
             right: 0;
@@ -280,32 +304,37 @@ ion-progress-bar {
             width: 70%;
             margin: auto;
         }
-
     }
+
     .search-service-ul {
         li {
             &.list-group-item {
                 padding: 20px;
+
                 &:first-child, &:last-child {
                     border-radius: 0;
                 }
+
                 &:nth-child(odd) {
                     background: #f1f1f1;
                 }
+
                 &:nth-child(even) {
                     background: #ffffff;
                 }
             }
         }
     }
+
     ion-grid {
         position: relative;
         height: 96px;
         margin-bottom: 20px;
         background: #fff;
-        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.11);
-        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.11);
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.11);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.11);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.11);
+
         .grid-icon {
             width: 76px;
             height: 100%;
@@ -314,6 +343,7 @@ ion-progress-bar {
             line-height: 96px;
             text-align: center;
             position: relative;
+
             &:after {
                 width: 20px;
                 height: 100%;
@@ -326,10 +356,12 @@ ion-progress-bar {
                 top: 0;
             }
         }
+
         .grid-information {
             display: inline-block;
             height: 100%;
             padding: 0 10px;
+
             h4 {
                 font-size: 22px;
                 font-family: 'Oswald', sans-serif;
@@ -344,9 +376,11 @@ ion-progress-bar {
                 overflow: hidden;
                 min-width: 200px;
             }
+
             p {
                 padding-left: 15px;
             }
+
             button {
                 background: #136785;
                 height: 40px;
@@ -362,6 +396,7 @@ ion-progress-bar {
                 cursor: pointer;
             }
         }
+
         span {
             &.edit {
                 position: absolute;
@@ -375,40 +410,122 @@ ion-progress-bar {
                 border-top: 50px solid #07ebfd;
                 border-left: 50px solid transparent;
                 cursor: pointer;
-                    i {
-                        position: absolute;
-                        left: -20px;
-                        top: -42px;
-                        right: 0;
-                        bottom: 0;
-                    }
+
+                i {
+                    position: absolute;
+                    left: -20px;
+                    top: -42px;
+                    right: 0;
+                    bottom: 0;
+                }
             }
         }
     }
 }
 
+button {
+    &.button-main {
+        padding: 10px 30px;
+        background: linear-gradient(to right, #12404f 0%, #1e7475 100%) !important;
+        color: white !important;
+        border-radius: 50px;
+        line-height: normal;
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
 
+        &:focus {
+            outline: none;
+            border: 0;
+            box-shadow: none;
+        }
+    }
+}
 
+alert-wrapper {
+    button {
+        background: auto !important;
+        color: inherit !important;
+    }
+}
 
+ion-label[position="floating"], ion-radio-group ion-list-header {
+    color: #136785 !important;
+}
 
+ion-radio-group {
+    ion-radio {
+        margin-inline-end: 12px;
+    }
+    ion-item {
+        --inner-border-width: 0;
+    }
+}
 
+.business-info-pp {
+    position: fixed;
+    top: 104px;
+    background: #134657;
+    color: #fff;
+    padding: 10px 0;
+    height: 102px;
+    width: 100%;
+    z-index: 10;
 
+    .profile-picture {
+        position: absolute;
+        top: -22px;
+        z-index: 99;
+        a {
+            position: absolute;
+            right: 3px;
+            top: 6px;
+            font-size: 24px;
+            color: white;
+        }
+    }
+}
 
+.topAdjust {
+    .backToHome {
+        top: 45px;
+    }
+}
 
+.upload-profile-pic {
+    background: #26b6ba;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+    line-height: 142px;
 
+    img {
+        width: 100px;
+        margin: auto;
+    }
+}
 
+.upload-profile-picture-w {
+    ion-list {
+        -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+        -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.11);
+        padding: 20px;
+        margin: 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        ion-item {
+            --padding-start: 0;
+            .fa {
+                color: #26b6ba;
+            }
+            &:last-of-type {
+                --inner-border-width: 0;
+            }
+        }
+    }
+}
