@@ -1,9 +1,75 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
-  </ion-toolbar>
+  <ion-grid no-padding class="head-grid inner-grid">
+    <img src="../../assets/images/innerPage_header.png" alt="Background image">
+    <a (click)="goToHomePage()">
+      <img src="../../assets/images/backTohome.svg" class="backToHome" width="24" alt="Back to home">
+    </a>
+    <h2>Contact Information</h2>
+    <!-- Default Progressbar with 50 percent -->
+    <ion-progress-bar color="secondary" value="0.8"></ion-progress-bar>
+  </ion-grid>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content no-padding>
+  <ion-grid no-padding class="content-grid-inner">
+    <ion-list class="">
+      <ion-item class="mb-3">
+        <ion-label position="floating">Business Owner Name:</ion-label>
+        <ion-input class="my-2" value="Siva" required type="text"></ion-input>
+      </ion-item>
+      <ion-item class="mb-3">
+        <ion-label position="floating">Primary Phone Number:</ion-label>
+        <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
+      </ion-item>
+      <ion-item class="mb-3">
+        <ion-label position="floating">Secondery Phone Number:</ion-label>
+        <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
+      </ion-item>
+      <ion-item class="mb-3">
+        <ion-row>
+          <ion-col class="col-6 p-0">
+            <ion-label position="floating">STD Code:</ion-label>
+            <ion-input class="my-2" value="040" required type="text"></ion-input>
+          </ion-col>
+          <ion-col class="col-6 p-0">
+            <ion-label position="floating">Landing Number (Optional):</ion-label>
+            <ion-input class="my-2" value="224455876" required type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item class="mb-3">
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input class="my-2" value="onlineservices@gmail.com" required type="text"></ion-input>
+      </ion-item>
+      <ion-radio-group class="mb-3">
+        <ion-list-header>
+          Gender:
+        </ion-list-header>
+        <ion-item class="d-inline-block">
+          <ion-label>Male</ion-label>
+          <ion-radio slot="start" checked value="Male"></ion-radio>
+        </ion-item>
+        <ion-item class="d-inline-block">
+          <ion-label>Female</ion-label>
+          <ion-radio slot="start" checked value="Female"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-item class="mb-3">
+        <ion-label>Graduate:</ion-label>
+        <ion-select>
+          <ion-select-option value="f">Bachelor of Commerce</ion-select-option>
+          <ion-select-option value="m">Bachelor Arts</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="mb-3">
+        <ion-label position="floating">Other Qualifications / Certificates (Optional):</ion-label>
+        <ion-input class="my-2" value="Not having anything..." required type="text"></ion-input>
+      </ion-item>
+      <ion-row>
+          <ion-col class="my-2">
+            <button class="mx-auto button-main d-block">Submit</button>
+          </ion-col>
+        </ion-row>
+    </ion-list>
+  </ion-grid>
 </ion-content>
