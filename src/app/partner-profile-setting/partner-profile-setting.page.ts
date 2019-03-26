@@ -16,4 +16,26 @@ export class PartnerProfileSettingPage implements OnInit {
   goToHomePage() {
     this.route.navigateByUrl('/home');
   }
+  selectService() {
+    this.route.navigateByUrl('select-service');
+  }
+  contactInformation() {
+    this.route.navigateByUrl('contact');
+  }
+
+  businessInformation() {
+    this.route.navigateByUrl('business-info');
+  }
+
+  documentsSubmission() {
+    this.route.navigateByUrl('select-service');
+  }
+
+  manageProfile() {
+    this.route.navigateByUrl('portfolio');
+  }
+
+  manageService() {
+    this.route.navigateByUrl('select-service');
+  }
 }

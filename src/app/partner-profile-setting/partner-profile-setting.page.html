@@ -1,90 +1,90 @@
 <ion-content no-padding>
-    <ion-grid no-padding class="head-grid inner-grid">
-      <img src="../../assets/images/innerPage_header.png" alt="Background image">
-      <a (click)="goToHomePage()"><img src="../../assets/images/backTohome.svg" class="backToHome" width="18" alt="Back to home"></a>
-      <h2>Partner Profile Setting</h2>
-      <!-- Default Progressbar with 50 percent -->
-      <ion-progress-bar color="secondary" value="0.6"></ion-progress-bar>
+  <ion-grid no-padding class="head-grid inner-grid">
+    <img src="../../assets/images/innerPage_header.png" alt="Background image">
+    <a (click)="goToHomePage()"><img src="../../assets/images/backTohome.svg" class="backToHome" width="18"
+        alt="Back to home"></a>
+    <h2>Partner Profile Setting</h2>
+    <!-- Default Progressbar with 50 percent -->
+    <ion-progress-bar color="secondary" value="0.6"></ion-progress-bar>
+  </ion-grid>
+  <ion-grid padding class="content-grid-inner">
+    <ion-grid class="awaiting">
+      <hr>
+      <h3>Awaiting Approval</h3>
+      <p>VolkSevis will shortly approve your profile</p>
     </ion-grid>
-    <ion-grid padding class="content-grid-inner">
-      <ion-grid class="awaiting">
-        <hr>
-        <h3>Awaiting Approval</h3>
-        <p>VolkSevis will shortly approve your profile</p>
-      </ion-grid>
-      <ion-grid no-padding>
-       <div class="grid-icon">
-         <img src="../../assets/images/select_sevices_icon.png" alt="">
-       </div> 
-       <div class="grid-information">
-         <h4>Select Services</h4>
-         <p class="text-success">100% Complete</p>
-       </div>
-       <span class="edit">
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-       </span>
-      </ion-grid>
-      <ion-grid no-padding>
-          <div class="grid-icon">
-            <img src="../../assets/images/contact_info_icon.png" alt="">
-          </div> 
-          <div class="grid-information">
-            <h4>Contact Information</h4>
-            <p class="text-success">100% Complete</p>
-          </div>
-          <span class="edit">
-             <i class="fa fa-pencil" aria-hidden="true"></i>
-          </span>
-         </ion-grid>
-         <ion-grid no-padding>
-            <div class="grid-icon">
-              <img src="../../assets/images/business_deals.png" alt="">
-            </div> 
-            <div class="grid-information">
-              <h4>Business Details</h4>
-              <p class="text-success">100% Complete</p>
-            </div>
-            <span class="edit">
-               <i class="fa fa-pencil" aria-hidden="true"></i>
-            </span>
-           </ion-grid>
-           <ion-grid no-padding>
-              <div class="grid-icon">
-                <img src="../../assets/images/documents_verfication_icon.png" alt="">
-              </div> 
-              <div class="grid-information">
-                <h4>Documents for Verification</h4>
-                <p class="text-danger">0% Complete</p>
-              </div>
-              <span class="edit">
-                 <i class="fa fa-pencil" aria-hidden="true"></i>
-              </span>
-             </ion-grid>
-             <ion-grid no-padding>
-                <div class="grid-icon">
-                  <img src="../../assets/images/manage_portfolio_icon.png" alt="">
-                </div> 
-                <div class="grid-information">
-                  <h4>Manage Portpolio</h4>
-                  <p class="text-warning">75% Complete</p>
-                </div>
-                <span class="edit">
-                   <i class="fa fa-pencil" aria-hidden="true"></i>
-                </span>
-               </ion-grid>
-               <ion-grid no-padding>
-                  <div class="grid-icon">
-                    <img src="../../assets/images/manage_services_icon.png" alt="">
-                  </div>  
-                  <div class="grid-information">
-                    <h4>Manage Services</h4>
-                    <p>Manage your catalogs</p>
-                    <button>Go</button>
-                  </div>
-                  <span class="edit">
-                     <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </span>
-                 </ion-grid>
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/select_sevices_icon.png" alt="">
+      </div>
+      <div class="grid-information" (click)="selectService()">
+        <h4>Select Services</h4>
+        <p class="text-success">100% Complete</p>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
     </ion-grid>
-    </ion-content>
-    
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/contact_info_icon.png" alt="">
+      </div>
+      <div class="grid-information" (click)="contactInformation()">
+        <h4>Contact Information</h4>
+        <p class="text-success">100% Complete</p>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    </ion-grid>
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/business_deals.png" alt="">
+      </div>
+      <div class="grid-information" (click)="businessInformation()">
+        <h4>Business Details</h4>
+        <p class="text-success">100% Complete</p>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    </ion-grid>
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/documents_verfication_icon.png" alt="">
+      </div>
+      <div class="grid-information" (click)="documentsSubmission()">
+        <h4>Documents for Verification</h4>
+        <p class="text-danger">0% Complete</p>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    </ion-grid>
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/manage_portfolio_icon.png" alt="">
+      </div>
+      <div class="grid-information" (click)="manageProfile()">
+        <h4>Manage Portpolio</h4>
+        <p class="text-warning">75% Complete</p>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    </ion-grid>
+    <ion-grid no-padding>
+      <div class="grid-icon">
+        <img src="../../assets/images/manage_services_icon.png" alt="">
+      </div>
+      <div class="grid-information" (click)="manageService()">
+        <h4>Manage Services</h4>
+        <p>Manage your catalogs</p>
+        <button>Go</button>
+      </div>
+      <span class="edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </span>
+    </ion-grid>
+  </ion-grid>
+</ion-content>

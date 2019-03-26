@@ -13,7 +13,7 @@
       </div>
       <ion-input placeholder="What service do you provide?" type="text"></ion-input>
     </ion-grid>
-    <ul class="list-group search-service-ul">
+    <!-- <ul class="list-group search-service-ul">
       <li class="list-group-item">
         <div class="form-check">
           <label class="form-check-label">
@@ -78,10 +78,17 @@
         </div>
       </li>
 
-    </ul>
+    </ul> -->
+    <ion-list class="list-group search-service-ul">
+      <ion-item *ngFor="let entry of listOfServices">
+
+        <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+        <ion-label>{{entry}}</ion-label>
+      </ion-item>
+    </ion-list>
     <ion-row>
       <ion-col class="my-4">
-        <button class="mx-auto button-main d-block">Save & Continue</button>
+        <button class="mx-auto button-main d-block" (click)="contuine()">Save & Continue</button>
       </ion-col>
     </ion-row>
   </ion-grid>

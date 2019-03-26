@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-select-service',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectServicePage implements OnInit {
 
-  constructor() { }
+  listOfServices = [];
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
+    this.listOfServices = ["Automobile Services", "Health & Personal", "Electronics & Appliances", "Photography Services", "Home Maintenance", "Cleaning Services", "Document Services"]
+  }
+  contuine() {
+
+    this.route.navigateByUrl('/contact')
+
   }
 
 }
