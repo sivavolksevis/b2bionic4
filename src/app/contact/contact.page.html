@@ -12,64 +12,72 @@
 
 <ion-content no-padding>
   <ion-grid no-padding class="content-grid-inner">
-    <ion-list class="">
-      <ion-item class="mb-3">
-        <ion-label position="floating">Business Owner Name:</ion-label>
-        <ion-input class="my-2" value="Siva" required type="text"></ion-input>
-      </ion-item>
-      <ion-item class="mb-3">
-        <ion-label position="floating">Primary Phone Number:</ion-label>
-        <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
-      </ion-item>
-      <ion-item class="mb-3">
-        <ion-label position="floating">Secondery Phone Number:</ion-label>
-        <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
-      </ion-item>
-      <ion-item class="mb-3">
+    <form [formGroup]="vksContactForm">
+      <ion-list class="">
+        <ion-item class="mb-3">
+          <ion-label position="floating">Business Owner Name:</ion-label>
+          <ion-input class="my-2" type="text" formControlName="businessOwnerName"></ion-input>
+        </ion-item>
+        <ion-item class="mb-3">
+          <ion-label position="floating">Primary Phone Number:</ion-label>
+          <ion-input class="my-2" type="text" formControlName="mobileNumber"></ion-input>
+        </ion-item>
+        <ion-item class="mb-3">
+          <ion-label position="floating">Secondery Phone Number:</ion-label>
+          <ion-input class="my-2" value="9876543210" required type="text" formControlName="secondaryMobileNumber">
+          </ion-input>
+        </ion-item>
+        <ion-item class="mb-3">
+          <ion-row>
+            <ion-col class="col-6 p-0">
+              <ion-label position="floating">STD Code:</ion-label>
+              <ion-input class="my-2" value="040" required type="text"></ion-input>
+            </ion-col>
+            <ion-col class="col-6 p-0">
+              <ion-label position="floating">Landing Number (Optional):</ion-label>
+              <ion-input class="my-2" value="224455876" required type="text" formControlName="landLineNumber">
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+        <ion-item class="mb-3">
+          <ion-label position="floating">Email:</ion-label>
+          <ion-input class="my-2" value="onlineservices@gmail.com" required type="text" formControlName="email">
+          </ion-input>
+        </ion-item>
+        <ion-radio-group class="mb-3">
+          <ion-list-header>
+            Gender:
+          </ion-list-header>
+          <ion-item class="d-inline-block">
+            <ion-label>Male</ion-label>
+            <ion-radio slot="start" value="Male" name="gender" formControlName="gender"></ion-radio>
+          </ion-item>
+          <ion-item class="d-inline-block">
+            <ion-label>Female</ion-label>
+            <ion-radio slot="start" value="Female" name="gender" formControlName="gender"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+        <ion-item class="mb-3">
+          <ion-label>Graduate:</ion-label>
+          <ion-select id="qualification" formControlName="qualification">
+            <ion-select-option value="Bachelor of Commerce">Bachelor of Commerce</ion-select-option>
+            <ion-select-option value="Bachelor Arts">Bachelor Arts</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="mb-3">
+          <ion-label position="floating">Other Qualifications / Certificates (Optional):</ion-label>
+          <ion-input class="my-2" value="Not having anything..." required type="text"
+            formControlName="otherQualifications"></ion-input>
+        </ion-item>
         <ion-row>
-          <ion-col class="col-6 p-0">
-            <ion-label position="floating">STD Code:</ion-label>
-            <ion-input class="my-2" value="040" required type="text"></ion-input>
-          </ion-col>
-          <ion-col class="col-6 p-0">
-            <ion-label position="floating">Landing Number (Optional):</ion-label>
-            <ion-input class="my-2" value="224455876" required type="text"></ion-input>
+          <ion-col class="my-2">
+            <button class="mx-auto button-main d-block" (click)="submit()">Submit</button>
           </ion-col>
         </ion-row>
-      </ion-item>
-      <ion-item class="mb-3">
-        <ion-label position="floating">Email:</ion-label>
-        <ion-input class="my-2" value="onlineservices@gmail.com" required type="text"></ion-input>
-      </ion-item>
-      <ion-radio-group class="mb-3">
-        <ion-list-header>
-          Gender:
-        </ion-list-header>
-        <ion-item class="d-inline-block">
-          <ion-label>Male</ion-label>
-          <ion-radio slot="start" checked value="Male"></ion-radio>
-        </ion-item>
-        <ion-item class="d-inline-block">
-          <ion-label>Female</ion-label>
-          <ion-radio slot="start" checked value="Female"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
-      <ion-item class="mb-3">
-        <ion-label>Graduate:</ion-label>
-        <ion-select>
-          <ion-select-option value="f">Bachelor of Commerce</ion-select-option>
-          <ion-select-option value="m">Bachelor Arts</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-item class="mb-3">
-        <ion-label position="floating">Other Qualifications / Certificates (Optional):</ion-label>
-        <ion-input class="my-2" value="Not having anything..." required type="text"></ion-input>
-      </ion-item>
-      <ion-row>
-        <ion-col class="my-2">
-          <button class="mx-auto button-main d-block" (click)="submit()">Submit</button>
-        </ion-col>
-      </ion-row>
-    </ion-list>
+      </ion-list>
+    </form>
   </ion-grid>
+
 </ion-content>
