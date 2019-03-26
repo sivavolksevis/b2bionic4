@@ -2,7 +2,8 @@
   <img src="../../assets/images/volkSevis_logo.png" alt="logo" width="120" class="logo" />
 
   <ion-grid class="home-slider ion-no-padding">
-    <ion-slides class="ion-no-padding" no-padding autoplay="400" loop="true" speed="3000" [options]="slideOptsOne" pager="true">
+    <ion-slides class="ion-no-padding" no-padding autoplay="400" loop="true" speed="3000" [options]="slideOptsOne"
+      pager="true">
       <ion-slide>
         <img src="../../assets/images/slide_1.jpeg" alt="Home slide image">
       </ion-slide>
@@ -20,7 +21,7 @@
       <label class="mb-3" for="">Login with</label>
       <button (click)="goToLoginWithMobile()"><i class="fa fa-phone" aria-hidden="true"></i></button>
       <button (click)="goToLoginWithEmail()"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-      <a href="#">Continue with your Registration</a>
+      <a href="/registration">Continue with your Registration</a>
     </ion-grid>
   </ion-grid>
 </ion-content>
