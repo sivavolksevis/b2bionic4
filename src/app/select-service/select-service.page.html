@@ -83,7 +83,7 @@
       <ion-item *ngFor="let entry of listOfServices">
 
         <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
-        <ion-label>{{entry}}</ion-label>
+        <ion-label>{{entry.categoryName}}</ion-label>
       </ion-item>
     </ion-list>
     <ion-row>

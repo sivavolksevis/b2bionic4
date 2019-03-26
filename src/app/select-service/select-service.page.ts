@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { VolkseivsAPIService } from '../volkseivs-api.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-select-service',
@@ -10,15 +12,30 @@ export class SelectServicePage implements OnInit {
 
   listOfServices = [];
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private vksAPI: VolkseivsAPIService, public loadingController: LoadingController) { }
 
   ngOnInit() {
-    this.listOfServices = ["Automobile Services", "Health & Personal", "Electronics & Appliances", "Photography Services", "Home Maintenance", "Cleaning Services", "Document Services"]
+    this.getAllServices();
+    // this.listOfServices = ["Automobile Services", "Health & Personal", "Electronics & Appliances", "Photography Services", "Home Maintenance", "Cleaning Services", "Document Services"]
   }
   contuine() {
 
     this.route.navigateByUrl('/contact')
 
+  }
+
+  async getAllServices() {
+
+
+    await this.vksAPI.getAllServices()
+      .subscribe(res => {
+        console.log(res);
+        this.listOfServices = res.response;
+        //  loading.dismiss();
+      }, err => {
+        console.log(err);
+        //  loading.dismiss();
+      });
   }
 
 }
