@@ -1,107 +1,129 @@
 <ion-header>
-    <ion-grid no-padding class="head-grid inner-grid">
-      <img src="../../assets/images/innerPage_header.png" alt="Background image">
-      <a (click)="goToHomePage()">
-        <img src="../../assets/images/backTohome.svg" class="backToHome" width="24" alt="Back to home">
-      </a>
-      <h2>Business Information</h2>
-      <!-- Default Progressbar with 50 percent -->
-      <ion-progress-bar color="secondary" value="0.8"></ion-progress-bar>
-    </ion-grid>
-  </ion-header>
-  
-  <ion-content no-padding>
-    <ion-grid no-padding class="business-info-pp">
-        <ion-row>
-            <ion-col class="col-4">
-              <div class="profile-picture">
-                <img src="../../assets/images/business_profile_picture.png" class="rounded" alt="Profile picture">
-                <a href="#"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
-              </div>
-            </ion-col>
-            <ion-col class="col-8">
-                <h2 class="text-white mb-2">Change Profile Picture</h2>
-                <p>A good profile pic will help you build trust.</p>
-              </ion-col>
-          </ion-row>
-    </ion-grid>
-    <ion-grid no-padding class="content-grid-inner business-inner">
+  <ion-grid no-padding class="head-grid inner-grid">
+    <img src="../../assets/images/innerPage_header.png" alt="Background image">
+    <a (click)="goToHomePage()">
+      <img src="../../assets/images/backTohome.svg" class="backToHome" width="24" alt="Back to home">
+    </a>
+    <h2>Business Information</h2>
+    <!-- Default Progressbar with 50 percent -->
+    <ion-progress-bar color="secondary" value="0.8"></ion-progress-bar>
+  </ion-grid>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-grid no-padding class="business-info-pp">
+    <ion-row>
+      <ion-col class="col-4">
+        <div class="profile-picture">
+          <img src="../../assets/images/business_profile_picture.png" class="rounded" alt="Profile picture">
+          <a href="#"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+        </div>
+      </ion-col>
+      <ion-col class="col-8">
+        <h2 class="text-white mb-2">Change Profile Picture</h2>
+        <p>A good profile pic will help you build trust.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid no-padding class="content-grid-inner business-inner">
+    <form [formGroup]="vksBusinessForm">
       <ion-list class="">
         <ion-item class="mb-3">
-          <ion-label position="floating">Business Owner Name:</ion-label>
-          <ion-input class="my-2" value="Siva" required type="text"></ion-input>
+          <ion-label position="floating">Business Name</ion-label>
+          <ion-input class="my-2" placeholder="Siva Salons" formControlName="businessName" type="text"></ion-input>
         </ion-item>
         <ion-item class="mb-3">
-          <ion-label position="floating">Primary Phone Number:</ion-label>
-          <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
-        </ion-item>
-        <ion-item class="mb-3">
-          <ion-label position="floating">Secondery Phone Number:</ion-label>
-          <ion-input class="my-2" value="9876543210" required type="text"></ion-input>
-        </ion-item>
-        <ion-item class="mb-3">
-          <ion-row>
-            <ion-col class="col-6 p-0">
-              <ion-label position="floating">STD Code:</ion-label>
-              <ion-input class="my-2" value="040" required type="text"></ion-input>
-            </ion-col>
-            <ion-col class="col-6 p-0">
-              <ion-label position="floating">Landing Number (Optional):</ion-label>
-              <ion-input class="my-2" value="224455876" required type="text"></ion-input>
-            </ion-col>
-          </ion-row>
-        </ion-item>
-        <ion-item class="mb-3">
-          <ion-label position="floating">Email:</ion-label>
-          <ion-input class="my-2" value="onlineservices@gmail.com" required type="text"></ion-input>
-        </ion-item>
-        <ion-radio-group class="mb-3">
-          <ion-list-header>
-           <h4 class="text-center">Select working timeslots</h4>
-          </ion-list-header>
-          <ion-row no-padding>
-            <ion-col class="col-6 p-0">
-                <ion-item class="d-inline-block">
-                    <ion-label>5 AM - 7 AM</ion-label>
-                    <ion-radio slot="start" checked value="Male"></ion-radio>
-                  </ion-item>
-            </ion-col>
-            <ion-col class="col-6 p-0">
-                <ion-item class="d-inline-block">
-                    <ion-label>7 AM - 9 AM</ion-label>
-                    <ion-radio slot="start" checked value="Female"></ion-radio>
-                  </ion-item>
-            </ion-col>
-            <ion-col class="col-6 p-0">
-                <ion-item class="d-inline-block">
-                    <ion-label>9 AM - 11 AM</ion-label>
-                    <ion-radio slot="start" checked value="Male"></ion-radio>
-                  </ion-item>
-            </ion-col>
-            <ion-col class="col-6 p-0">
-                <ion-item class="d-inline-block">
-                    <ion-label>11 AM - 1 PM</ion-label>
-                    <ion-radio slot="start" checked value="Female"></ion-radio>
-                  </ion-item>
-            </ion-col>
-          </ion-row>
-        </ion-radio-group>
-        <ion-item class="mb-3">
-          <ion-label>Graduate:</ion-label>
-          <ion-select>
-            <ion-select-option value="f">Bachelor of Commerce</ion-select-option>
-            <ion-select-option value="m">Bachelor Arts</ion-select-option>
+          <ion-label>Type Of Business</ion-label>
+          <ion-select id="businessType" formControlName="businessType">
+            <ion-select-option value="Private Limited">Private Limited</ion-select-option>
+            <ion-select-option value="Partnership Firm">Partnership Firm</ion-select-option>
+            <ion-select-option value="Individual">Individual</ion-select-option>
+            <ion-select-option value="LLC">LLC</ion-select-option>
+            <ion-select-option value="Others">Others</ion-select-option>
           </ion-select>
         </ion-item>
         <ion-item class="mb-3">
-          <ion-label position="floating">Other Qualifications / Certificates (Optional):</ion-label>
-          <ion-input class="my-2" value="Not having anything..." required type="text"></ion-input>
+          <ion-label position="floating">Business Details</ion-label>
+          <ion-textarea placeholder="Tell customer about your business here" formControlName="businessDescription">
+          </ion-textarea>
         </ion-item>
-        <ion-row>
-            <ion-col class="my-2">
-              <button class="mx-auto button-main d-block">Save Details</button>
+
+        <ion-item class="mb-3">
+          <ion-row>
+            <ion-col class="col-6 p-0">
+              <ion-label>Business Start Year</ion-label>
+              <ion-datetime display-format="YYYY" formControlName="businessStartYear"></ion-datetime>
+            </ion-col>
+            <ion-col class="col-6 p-0">
+              <ion-label position="floating">Team Size</ion-label>
+              <ion-input class="my-2" formControlName="teamSize" type="text"></ion-input>
             </ion-col>
           </ion-row>
+        </ion-item>
+
+        <ion-radio-group class="mb-3">
+          <ion-list-header>
+            <h4 class="text-center">Select working timeslots</h4>
+          </ion-list-header>
+          <ion-row no-padding>
+            <ion-col class="col-6 p-0" *ngFor="let workSlot of workingHours; let i = index;">
+              <ion-item-group>
+                <ion-item>
+                  <ion-label>{{workSlot.timeSlotName}}</ion-label>
+                  <ion-checkbox (ionChange)="changeRadioStatus(workSlot,i)" formControlName="timeSlots" checked="false">
+                  </ion-checkbox>
+                </ion-item>
+              </ion-item-group>
+            </ion-col>
+
+
+          </ion-row>
+        </ion-radio-group>
+
+        <ion-list>
+          <ion-list-header>
+            <h4 class="text-center">Weekly Holidays</h4>
+          </ion-list-header>
+          <ion-col class="col-6 p-0" *ngFor="let holiday of WeeklyHoliday; let i = index;">
+            <ion-item-group>
+              <ion-item>
+                <ion-label>{{holiday.weekName}}</ion-label>
+                <ion-checkbox (ionChange)="changeWeeklyStatus(holiday,i)" formControlName="weekHolidays"
+                  checked="false">
+                </ion-checkbox>
+              </ion-item>
+            </ion-item-group>
+          </ion-col>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            <h4 class="text-center">Known Languages</h4>
+          </ion-list-header>
+          <ion-col class="col-6 p-0" *ngFor="let language of Languages; let i = index;">
+            <ion-item-group>
+              <ion-item>
+                <ion-label>{{language.langName}}</ion-label>
+                <ion-checkbox (ionChange)="changeLangugaesStatus(language,i)" formControlName="langugaes"
+                  checked="false">
+                </ion-checkbox>
+              </ion-item>
+            </ion-item-group>
+          </ion-col>
+        </ion-list>
+
+        <ion-row>
+          <ion-col class="my-2">
+            <button class="mx-auto button-main d-block">Business Address</button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="my-2">
+            <button class="mx-auto button-main d-block" (click)="saveBusinssInformation()">Save Details</button>
+          </ion-col>
+        </ion-row>
       </ion-list>
-    </ion-grid>
-  </ion-content>
+    </form>
+  </ion-grid>
+</ion-content>

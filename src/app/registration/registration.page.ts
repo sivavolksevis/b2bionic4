@@ -110,7 +110,8 @@ export class RegistrationPage implements OnInit {
   }
 
   getUserFullAddress(longitude, latitude) {
-    this.nativeGeocoder.reverseGeocode(longitude, latitude, this.options)
+    longitude = '36.8139287', latitude = ''
+    this.nativeGeocoder.reverseGeocode(-1.2579361, 36.8139287, this.options)
       .then((result: NativeGeocoderReverseResult[]) => {
         console.log(JSON.stringify(result[0]));
         let location = result[0];
