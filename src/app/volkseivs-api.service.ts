@@ -6,7 +6,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
-const apiUrl = "http://192.168.0.7:8080/volksevis/api/";
+const apiUrl = "http://192.168.0.4:8080/volksevis/api/";
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +44,12 @@ export class VolkseivsAPIService {
   postContactInformation(object): Observable<any> {
     object["memberId"] = 682015;
     return this.http.post(apiUrl + 'saveMemberInfo', object, httpOptions).pipe(
+      tap((res) => console.log(res)), catchError(this.handleError));
+  }
+
+  postbusinessInformation(object): Observable<any> {
+    //  object["memberId"] = 682015;
+    return this.http.post(apiUrl + 'saveBusinessInfo', object, httpOptions).pipe(
       tap((res) => console.log(res)), catchError(this.handleError));
   }
 
