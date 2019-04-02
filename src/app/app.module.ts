@@ -14,6 +14,10 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { Crop } from '@ionic-native/crop/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -26,6 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     Sim,
     Geolocation,
     NativeGeocoder,
+    ImagePicker,
+    Crop,
+    FileTransfer,
 
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

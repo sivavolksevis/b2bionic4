@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'portfolio', loadChildren: './portfolio/portfolio.module#PortfolioPageModule' },
   { path: 'upload-profile-picture', loadChildren: './upload-profile-picture/upload-profile-picture.module#UploadProfilePicturePageModule' },
   { path: 'upload-cover-photo', loadChildren: './upload-cover-photo/upload-cover-photo.module#UploadCoverPhotoPageModule' },
-  { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' }
+  { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
+  { path: 'document-verification', loadChildren: './document-verification/document-verification.module#DocumentVerificationPageModule' }
 ];
 
 @NgModule({
