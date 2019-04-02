@@ -18,8 +18,7 @@ const routes: Routes = [
   { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
   { path: 'upload-documents', loadChildren: './upload-documents/upload-documents.module#UploadDocumentsPageModule' },
    { path: 'document-verification', loadChildren: './document-verification/document-verification.module#DocumentVerificationPageModule' }
- 
-  
+
 ];
 
 @NgModule({
