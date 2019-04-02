@@ -13,7 +13,10 @@ const routes: Routes = [
   { path: 'portfolio', loadChildren: './portfolio/portfolio.module#PortfolioPageModule' },
   { path: 'upload-profile-picture', loadChildren: './upload-profile-picture/upload-profile-picture.module#UploadProfilePicturePageModule' },
   { path: 'upload-cover-photo', loadChildren: './upload-cover-photo/upload-cover-photo.module#UploadCoverPhotoPageModule' },
-  { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' }
+  { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
+  { path: 'catalog-management', loadChildren: './catalog-management/catalog-management.module#CatalogManagementPageModule' },
+  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
+  { path: 'upload-documents', loadChildren: './upload-documents/upload-documents.module#UploadDocumentsPageModule' }
 ];
 
 @NgModule({

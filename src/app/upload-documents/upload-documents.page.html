@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-grid no-padding class="head-grid inner-grid">
+    <img src="../../assets/images/innerPage_header.png" alt="Background image">
+    <a (click)="goToHomePage()">
+      <img src="../../assets/images/backTohome.svg" class="backToHome" width="24" alt="Back to home">
+    </a>
+    <h2>Upload Documents</h2>
+    <!-- Default Progressbar with 50 percent -->
+    <ion-progress-bar color="secondary" value="0.2"></ion-progress-bar>
+  </ion-grid>
+</ion-header>
+<ion-content no-padding>
+    <ion-grid no-padding class="content-grid-inner">
+<ion-row>
+  <ion-col class="col-6">
+      <span id="filename">Pan Card</span>
+      <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+  </ion-col>
+  <ion-col class="col-6">
+      <span id="filename">Voter ID</span>
+      <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+  </ion-col>
+  <ion-col class="col-6">
+      <span id="filename">Driving License</span>
+      <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+  </ion-col>
+  <ion-col class="col-6">
+      <span id="filename">Aadhar Card</span>
+      <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+  </ion-col>
+</ion-row>
+<ion-row>
+   <ion-col class="col-12 my-2">
+      <h3>Payment Information</h3>
+   </ion-col>
+    <ion-col class="col-6">
+        <span id="filename">Cancelled Cheque</span>
+        <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+    </ion-col>
+    <ion-col class="col-6">
+        <span id="filename">Bank Passbook</span>
+        <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+    </ion-col>
+    <ion-col class="col-6">
+        <ion-item no-padding>
+            <ion-label position="floating">IFSC Code</ion-label>
+            <ion-input required value="SBIN000038" type="text"></ion-input>
+          </ion-item>
+    </ion-col>
+    <ion-col class="col-6">
+        <ion-item no-padding>
+            <ion-label position="floating">Account No.</ion-label>
+            <ion-input required value="33887785588" type="text"></ion-input>
+          </ion-item>
+    </ion-col>
+    <ion-col class="col-12">
+        <ion-item no-padding>
+            <ion-label position="floating">Payee Name</ion-label>
+            <ion-input required value="Siva Prasad G" type="text"></ion-input>
+          </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col class="col-12 my-2">
+         <h3>Business Information</h3>
+      </ion-col>
+       <ion-col class="col-12">
+           <span id="filename">Business Registration Form</span>
+           <label for="file-upload"><ion-icon name="cloud-upload"></ion-icon><input type="file" id="file-upload"></label>
+       </ion-col>
+       <ion-col class="col-12 my-2">
+          <h3>Reference Details</h3>
+       </ion-col>
+       <ion-col class="col-12">
+          <ion-item no-padding>
+              <ion-label position="floating">Name</ion-label>
+              <ion-input required value="Siva Prasad G" type="text"></ion-input>
+            </ion-item>
+      </ion-col>
+      <ion-col class="col-12">
+          <ion-item no-padding>
+              <ion-label position="floating">Mobile No.</ion-label>
+              <ion-input required value="9876543210" type="text"></ion-input>
+            </ion-item>
+      </ion-col>
+      <ion-col class="col-12">
+          <ion-item no-padding>
+              <ion-label position="floating">Relationship</ion-label>
+              <ion-input required value="Self" type="text"></ion-input>
+            </ion-item>
+      </ion-col>
+      <ion-col class="col-12">
+          <button ion-button class="buttonFill p-3 rounded w-75 mx-auto d-block my-4">Save Details</button>
+       </ion-col>
+     </ion-row>
+     
+</ion-grid>
+</ion-content>
