@@ -28,7 +28,7 @@ export class PartnerProfileSettingPage implements OnInit {
   }
 
   documentsSubmission() {
-    this.route.navigateByUrl('select-service');
+    this.route.navigateByUrl('document-verification');
   }
 
   manageProfile() {

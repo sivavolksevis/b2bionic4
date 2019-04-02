@@ -16,7 +16,10 @@ const routes: Routes = [
   { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
   { path: 'catalog-management', loadChildren: './catalog-management/catalog-management.module#CatalogManagementPageModule' },
   { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
-  { path: 'upload-documents', loadChildren: './upload-documents/upload-documents.module#UploadDocumentsPageModule' }
+  { path: 'upload-documents', loadChildren: './upload-documents/upload-documents.module#UploadDocumentsPageModule' },
+   { path: 'document-verification', loadChildren: './document-verification/document-verification.module#DocumentVerificationPageModule' }
+ 
+  
 ];
 
 @NgModule({
