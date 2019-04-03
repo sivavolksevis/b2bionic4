@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'catalog-management', loadChildren: './catalog-management/catalog-management.module#CatalogManagementPageModule' },
   { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
   { path: 'upload-documents', loadChildren: './upload-documents/upload-documents.module#UploadDocumentsPageModule' },
-   { path: 'document-verification', loadChildren: './document-verification/document-verification.module#DocumentVerificationPageModule' }
+  { path: 'detail-services', loadChildren: './detail-services/detail-services.module#DetailServicesPageModule' },
+  //  { path: 'document-verification', loadChildren: './document-verification/document-verification.module#DocumentVerificationPageModule' }
 
 ];
 

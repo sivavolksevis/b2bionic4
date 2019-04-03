@@ -19,11 +19,11 @@ export class SelectServicePage implements OnInit {
     // this.listOfServices = ["Automobile Services", "Health & Personal", "Electronics & Appliances", "Photography Services", "Home Maintenance", "Cleaning Services", "Document Services"]
   }
   contuine() {
-
     this.route.navigateByUrl('/contact')
-
   }
-
+  goToCatalogManagement() {
+    this.route.navigateByUrl('/catalog-management')
+  }
   async getAllServices() {
 
 
