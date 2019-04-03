@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavParams  } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-catalog-management',
@@ -9,15 +9,11 @@ import { ModalPage } from '../modal/modal.page';
 })
 export class CatalogManagementPage implements OnInit {
 
-  constructor(public modalController: ModalController) { }
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: ModalPage,
-      componentProps: { value: 123 }
-    });
-    return await modal.present();
-  }
+  constructor(private route: Router,) { }
 
+  detailPage() {
+    this.route.navigateByUrl('/detail-services')
+  }
 
 
   ngOnInit() {
