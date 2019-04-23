@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { SpinnerDialog } from '@ionic-native/spinner-dialog/ngx';
-import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+import { NativeGeocoder, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
 
 @Component({
   selector: 'app-registration',
@@ -112,7 +112,7 @@ export class RegistrationPage implements OnInit {
   getUserFullAddress(longitude, latitude) {
     longitude = '36.8139287', latitude = ''
     this.nativeGeocoder.reverseGeocode(-1.2579361, 36.8139287, this.options)
-      .then((result: NativeGeocoderReverseResult[]) => {
+      .then((result) => {
         console.log(JSON.stringify(result[0]));
         let location = result[0];
         if (location.locality) {
@@ -123,7 +123,7 @@ export class RegistrationPage implements OnInit {
       .catch((error: any) => console.log(error));
 
     this.nativeGeocoder.forwardGeocode('Berlin', this.options)
-      .then((coordinates: NativeGeocoderForwardResult[]) => console.log('The coordinates are latitude=' + coordinates[0].latitude + ' and longitude=' + coordinates[0].longitude))
+      .then((coordinates) => console.log('The coordinates are latitude=' + coordinates[0].latitude + ' and longitude=' + coordinates[0].longitude))
       .catch((error: any) => console.log(error))
   }
 
