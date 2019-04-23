@@ -312,7 +312,7 @@ ion-progress-bar {
     .search-service-ul {
         li {
             &.list-group-item {
-                padding: 20px;
+                padding:10px 15px;
 
                 &:first-child, &:last-child {
                     border-radius: 0;
@@ -325,6 +325,10 @@ ion-progress-bar {
                 &:nth-child(even) {
                     background: #ffffff;
                 }
+            }
+            ion-item {
+                --background: none;
+                --border-color: transparent;
             }
         }
     }
@@ -424,6 +428,41 @@ ion-progress-bar {
             }
         }
     }
+    &.partner-profile-w {
+       ion-grid {
+           @extend ion-grid;
+           height: 70px;
+           margin-bottom: 14px;
+           .grid-icon {
+                width: 50px;
+                line-height: 64px;
+           }
+           .grid-information {
+               h4 {
+                   margin-top: 8px;
+                   margin-bottom: 5px;
+               }
+               button {
+                right: 38px;
+                top: 14px;
+               }
+           }
+           span {
+               &.edit {
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
+                border-top: 40px solid #07ebfd;
+                border-left: 40px solid transparent;
+                cursor: pointer;
+                   i {
+                    left: -19px;
+                    top: -37px;
+                   }
+               }
+           }
+       }
+    }
 }
 
 button {
@@ -442,6 +481,17 @@ button {
             box-shadow: none;
         }
     }
+   &.button-outline {
+    @extend .button-main;
+    background: none !important;
+    border: solid 2px #12404f;
+    color: #12404f !important;
+    &:focus {
+        outline: none;
+        border: solid 2px #12404f;
+        box-shadow: none;
+    }
+   }
 }
 
 alert-wrapper {
